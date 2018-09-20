@@ -23,6 +23,8 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';     // <--- ADDED
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -42,7 +44,8 @@ ClassicEditor.builtinPlugins = [
 	ImageUpload,
 	Link,
 	List,
-	Paragraph
+	Paragraph,
+	Alignment                                                            // <--- ADDED
 ];
 
 // Editor configuration.
@@ -51,6 +54,7 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'alignment',                                                 // <--- ADDED
 			'bold',
 			'italic',
 			'link',
@@ -71,5 +75,5 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'pt-br'
 };
